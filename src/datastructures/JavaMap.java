@@ -3,28 +3,34 @@ package datastructures;
 import java.util.*;
 
 public class JavaMap {
-    public static void main(String[] args) {
+    public static void main(String[] arg) {
+        Map<String, Integer> phoneBook = new HashMap<>();
         Scanner scan = new Scanner(System.in);
-        int n = scan.nextInt();
 
-        Map<String,Integer> phoneBook = new HashMap<>();
-        for (int i=0 ; i<n ; i++){
+        int n = scan.nextInt();
+        scan.nextLine();
+
+        /*add key and value to the map*/
+        while (n-- > 0) {
             String name = scan.nextLine();
             int number = scan.nextInt();
-            phoneBook.put(name,number);
+            scan.nextLine();
+            phoneBook.put(name, number);
         }
-//        while (n-->0){
-//            System.out.println(n);
-//            String name = scan.nextLine();
-//            int number = 1;
-//
-//            phoneBook.put(name,number);
-//        }
-        System.out.println(phoneBook.toString());
 
+        /*compare the added values*/
+        while (scan.hasNext()){
+            String s = scan.nextLine();
+            if (phoneBook.containsKey(s)){
+                System.out.println(s+"="+phoneBook.get(s));
+            }else {
+                System.out.println("Not found");
+            }
+        }
     }
 }
 
+// input
 //        3
 //        uncle sam
 //        99912222
@@ -36,6 +42,7 @@ public class JavaMap {
 //        uncle tom
 //        harry
 
+// output
 //    uncle sam=99912222
 //    Not found
 //    harry=12299933
