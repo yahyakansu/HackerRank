@@ -29,5 +29,21 @@ public class JavaList {
         for (Integer i:list) {
             System.out.print(i+" ");
         }
+        scan.close();
     }
 }
+
+
+/*
+Sample Input
+5
+12 0 1 78 12
+2
+Insert
+5 23
+Delete
+0
+
+Sample Output
+0 1 78 12 23
+ */

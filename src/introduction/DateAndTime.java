@@ -48,3 +48,12 @@ public class DateAndTime {
         bufferedWriter.close();
     }
 }
+
+
+/*
+Sample Input
+08 05 2015
+
+Sample Output
+WEDNESDAY
+ */

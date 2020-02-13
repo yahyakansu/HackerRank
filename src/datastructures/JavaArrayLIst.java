@@ -32,18 +32,29 @@ public class JavaArrayLIst {
             }
 
         }
-//        int q = scan.nextInt();
-//        for (int i = 0; i < 2; i++) {
-//            int x = scan.nextInt();
-//            int y = scan.nextInt();
-//            List<Integer> list = listOut.get(x-1);
-//
-//            if (y <= list.size()) {
-//                System.out.println(list.get(y-1));
-//            } else {
-//                System.out.println("ERROR!");
-//            }
-//        }
         scan.close();
     }
 }
+
+/*
+Sample Input
+5
+5 41 77 74 22 44
+1 12
+4 37 34 36 52
+0
+3 20 22 33
+5
+1 3
+3 4
+3 1
+4 3
+5 5
+
+Sample Output
+74
+52
+37
+ERROR!
+ERROR!
+ */

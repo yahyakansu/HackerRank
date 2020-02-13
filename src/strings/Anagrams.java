@@ -22,7 +22,6 @@ public class Anagrams {
                         break;
 
                     }
-
                 }
             }
         }return reverse;
@@ -38,3 +37,12 @@ public class Anagrams {
         System.out.println( (reverse) ? "Anagrams" : "Not Anagrams" );
     }
 }
+
+/*
+Sample Input 0
+anagram
+margana
+
+Sample Output 0
+Anagrams
+ */

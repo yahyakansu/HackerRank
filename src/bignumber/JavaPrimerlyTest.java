@@ -15,3 +15,11 @@ public class JavaPrimerlyTest {
         scan.close();
     }
 }
+
+/*
+Sample Input
+13
+
+Sample Output
+prime
+ */

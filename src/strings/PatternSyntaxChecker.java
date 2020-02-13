@@ -16,5 +16,19 @@ public class PatternSyntaxChecker {
             }catch(Exception e){System.out.println("Invalid");}
             testCases--;
         }
+        scan.close();
     }
 }
+
+/*
+Sample Input
+3
+([A-Z])(.+)
+[AZ[a-z](a-z)
+batcatpat(nat
+
+Sample Output
+Valid
+Invalid
+Invalid
+ */

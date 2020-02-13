@@ -27,3 +27,26 @@ public class ValidUsername {
         }
     }
 }
+
+/*
+Sample Input 0
+8
+Julia
+Samantha
+Samantha_21
+1Samantha
+Samantha?10_2A
+JuliaZ007
+Julia@007
+_Julia007
+
+Sample Output 0
+Invalid
+Valid
+Valid
+Invalid
+Invalid
+Valid
+Invalid
+Invalid
+ */

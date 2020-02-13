@@ -24,3 +24,10 @@ public class IfElse {
         scanner.close();
     }
 }
+/*
+  input
+  24
+
+  output
+  Not Weird
+ */

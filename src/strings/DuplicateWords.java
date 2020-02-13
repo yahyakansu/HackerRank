@@ -9,11 +9,11 @@ public class DuplicateWords {
         String regex = "\\b(\\w+)(?:\\W+\\1\\b)+";
         Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
 
-        Scanner in = new Scanner(System.in);
-        int numSentences = Integer.parseInt(in.nextLine());
+        Scanner scan = new Scanner(System.in);
+        int numSentences = Integer.parseInt(scan.nextLine());
 
         while (numSentences-- > 0) {
-            String input = in.nextLine();
+            String input = scan.nextLine();
 
             Matcher m = p.matcher(input);
 
@@ -26,6 +26,23 @@ public class DuplicateWords {
             System.out.println(input);
         }
 
-        in.close();
+        scan.close();
     }
 }
+
+/*
+Sample Input
+5
+Goodbye bye bye world world world
+Sam went went to to to his business
+Reya is is the the best player in eye eye game
+in inthe
+Hello hello Ab aB
+
+Sample Output
+Goodbye bye world
+Sam went to his business
+Reya is the best player in eye game
+in inthe
+Hello Ab
+ */

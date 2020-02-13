@@ -15,3 +15,15 @@ public class StdinStdout1 {
         System.out.println(c);
     }
 }
+
+/*
+  input
+  42
+  100
+  125
+
+  output
+  42
+  100
+  125
+ */

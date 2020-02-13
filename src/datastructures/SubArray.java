@@ -28,6 +28,16 @@ public class SubArray {
             }
         }
 
+        scan.close();
         System.out.print(count);
     }
 }
+
+/*
+Sample Input
+5
+1 -2 4 -5 1
+
+Sample Output
+9
+ */

@@ -10,5 +10,15 @@ public class Substring {
         int end = scan.nextInt();
 
         System.out.println(S.substring(start,end));
+        scan.close();
     }
 }
+
+/*
+Sample Input
+Helloworld
+3 7
+
+Sample Output
+lowo
+ */

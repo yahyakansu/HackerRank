@@ -14,6 +14,19 @@ public class OutputFormat {
             System.out.printf("%-14s %03d\n",s1,x);
         }
         System.out.println("================================");
-
     }
 }
+
+/*
+Sample Input
+java 100
+cpp 65
+python 50
+
+Sample Output
+================================
+java           100
+cpp            065
+python         050
+================================
+ */

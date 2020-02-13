@@ -43,4 +43,21 @@ public class Java1DArray2 {
     }
 }
 
+/*
+Sample Input
+4
+5 3
+0 0 0 0 0
+6 5
+0 0 0 1 1 1
+6 3
+0 0 1 1 1 0
+3 1
+0 1 0
 
+Sample Output
+YES
+YES
+NO
+NO
+ */
