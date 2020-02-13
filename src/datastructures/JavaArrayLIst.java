@@ -32,18 +32,6 @@ public class JavaArrayLIst {
             }
 
         }
-//        int q = scan.nextInt();
-//        for (int i = 0; i < 2; i++) {
-//            int x = scan.nextInt();
-//            int y = scan.nextInt();
-//            List<Integer> list = listOut.get(x-1);
-//
-//            if (y <= list.size()) {
-//                System.out.println(list.get(y-1));
-//            } else {
-//                System.out.println("ERROR!");
-//            }
-//        }
         scan.close();
     }
 }
