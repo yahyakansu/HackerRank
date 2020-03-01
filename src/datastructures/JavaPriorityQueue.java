@@ -1,17 +1,17 @@
-package dataStructuresExtention;
+package datastructures;
 
 import java.util.*;
-class Student implements Comparable<Student> {
+class Stu implements Comparable<Stu> {
     int id;
     String stname;
     double cgpa;
-    Student(int id, String name, double cgpa) {
+    Stu(int id, String name, double cgpa) {
         this.id = id;
         this.stname = name;
         this.cgpa = cgpa;
     }
 
-    public int compareTo(Student b) {
+    public int compareTo(Stu b) {
         if (this.cgpa > b.cgpa) { return -1; }
         if (this.cgpa < b.cgpa) { return 1; }
         if (this.cgpa == b.cgpa) {
@@ -32,18 +32,18 @@ class Student implements Comparable<Student> {
 
 class Priorities {
     Priorities() {}
-    public List<Student> getStudents(List<String> events) {
-        PriorityQueue<Student> queue = new PriorityQueue<Student>();
+    public List<Stu> getStudents(List<String> events) {
+        PriorityQueue<Stu> queue = new PriorityQueue<Stu>();
         for (int i = 0; i < events.size(); i++) {
             if (events.get(i).contains("SERVED")) {
                 if (queue.size() > 0) { queue.poll(); }
             } else {
                 String[] data = events.get(i).split(" ");
-                queue.add(new Student(Integer.parseInt(data[3]), data[1], Double.valueOf(data[2])));
+                queue.add(new Stu(Integer.parseInt(data[3]), data[1], Double.valueOf(data[2])));
             }
         }
 
-        List<Student> result = new ArrayList<>();
+        List<Stu> result = new ArrayList<>();
         while (queue.size() > 0) {
             result.add(queue.poll());
         }
@@ -64,14 +64,37 @@ public class JavaPriorityQueue {
             events.add(event);
         }
 
-        List<Student> students = priorities.getStudents(events);
+        List<Stu> students = priorities.getStudents(events);
 
         if (students.isEmpty()) {
             System.out.println("EMPTY");
         } else {
-            for (Student st: students) {
+            for (Stu st: students) {
                 System.out.println(st.getName());
             }
         }
     }
 }
+
+/*
+Sample Input 0
+12
+ENTER John 3.75 50
+ENTER Mark 3.8 24
+ENTER Shafaet 3.7 35
+SERVED
+SERVED
+ENTER Samiha 3.85 36
+SERVED
+ENTER Ashley 3.9 42
+ENTER Maria 3.6 46
+ENTER Anik 3.95 49
+ENTER Dan 3.95 50
+SERVED
+
+Sample Output 0
+Dan
+Ashley
+Shafaet
+Maria
+ */
