@@ -23,10 +23,10 @@ class Student{
 
 //Complete the code
 
-class compareStudent implements Comparator<bignumber.Student>{
+class compareStudent implements Comparator<Student>{
     double d=0.001;
     @Override
-    public int compare(bignumber.Student s1, bignumber.Student s2){
+    public int compare(Student s1, Student s2){
         if (Math.abs(s1.getCgpa() - s2.getCgpa()) > d) {
             return s1.getCgpa() < s2.getCgpa() ? 1 : -1; // descending order
         } else if (!s1.getFname().equals(s2.getFname())) {
@@ -43,18 +43,18 @@ public class JavaSort {
         Scanner scan  = new Scanner(System.in);
         int testCases = Integer.parseInt(scan.nextLine());
 
-        List<bignumber.Student> studentList = new ArrayList<bignumber.Student>();
+        List<Student> studentList = new ArrayList<Student>();
         while (testCases-- > 0) {
             int id       = scan.nextInt();
             String fname = scan.next();
             double cgpa  = scan.nextDouble();
-            bignumber.Student st   = new bignumber.Student(id, fname, cgpa);
+            Student st   = new Student(id, fname, cgpa);
             studentList.add(st);
         }
         scan.close();
 
         Collections.sort(studentList, new compareStudent());
-        for (bignumber.Student st: studentList) {
+        for (Student st: studentList) {
             System.out.println(st.getFname());
         }
     }

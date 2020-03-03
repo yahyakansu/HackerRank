@@ -1,4 +1,4 @@
-package datastructures;
+package dataStructuresExtention;
 
 import java.util.*;
 class Stu implements Comparable<Stu> {
